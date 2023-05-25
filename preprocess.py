@@ -7,12 +7,12 @@ def read_txt(filename):
     with open("./dataset/" + filename, 'r') as file:
         for line in file:
             data = line.split()
-            labels.append(data[0])
+            labels.append(float(data[0]))
             datas.append([float(x) for x in data[1:]])
         return datas, labels
 
 
-def normalized_data(datas):
-    datas = np.array(datas)
-    datas_normalized = (datas - np.min(datas, axis=0)) / (np.max(datas, axis=0) - np.min(datas, axis=0))
+# cite: https://learn.microsoft.com/en-us/azure/machine-learning/component-reference/normalize-data?view=azureml-api-2
+def normalized_data(data):
+    datas_normalized = 2 * (data - np.min(data, axis=0)) / (np.max(data, axis=0) - np.min(data, axis=0)) - 1
     return datas_normalized
