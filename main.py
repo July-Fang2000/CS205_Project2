@@ -19,11 +19,4 @@ feature_size = len(datas[0])
 instance_size = len(datas)
 datas = normalized_data(datas)
 
-classifier = NearestNeighborClassifier(datas, labels)
-accuracy = classifier.accuracy()
-
-print("This dataset has {} features(not including the class attribute), with {} instances."
-      .format(feature_size, instance_size))
-print("Running nearest neighbor with all {} features, "
-      "using \"leaving-one-out\" evaluation, I get an accuracy of {}%".format(feature_size, accuracy))
-print("Beginning search.")
+search(method, feature_size, instance_size, accuracy=NearestNeighborClassifier(datas, labels).accuracy())
