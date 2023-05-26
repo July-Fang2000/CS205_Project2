@@ -7,20 +7,13 @@ class NearestNeighborClassifier:
         self.labels = labels
 
     @staticmethod
-    def calculate_distance(data1, data2):
-        return np.sum((data1 - data2) ** 2)
+    def calculate_distances(data, datas):
+        return np.sum((datas - data) ** 2, axis=1)
 
     def find_nearest(self, index):
-        min_distance = float('inf')
-        nearest_index = -1
-        for i, data in enumerate(self.datas):
-            if i == index:
-                continue
-            distance = self.calculate_distance(data, self.datas[index])
-            if distance < min_distance:
-                min_distance = distance
-                nearest_index = i
-        return nearest_index
+        distances = self.calculate_distances(self.datas[index], self.datas)
+        distances[index] = float('inf')
+        return np.argmin(distances)
 
     def predict(self, index):
         return self.labels[self.find_nearest(index)]
