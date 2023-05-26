@@ -1,6 +1,7 @@
 import numpy as np
 
 
+# TODO: rewrite the Nearest Neighbor Algorithm
 class NearestNeighborClassifier:
     def __init__(self, datas, labels):
         self.datas = datas
@@ -92,7 +93,7 @@ def forward_selection(classifier, size):
 def backward_elimination(classifier, size):
     max_accuracy = -2
     set = list(range(size))
-    for i in range(size-1):
+    for i in range(size - 1):
         curr_accuracy = -1
         sets = explore_features(set, size, "backward")
         for expanded in sets:
