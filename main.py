@@ -19,6 +19,7 @@ method = input("Type the number of the algorithm you want to run.\n"
 datas, labels = read_txt(filename)
 feature_size = len(datas[0])
 instance_size = len(datas)
-datas = normalized_data(datas)
+datas = standard_data(datas)
 classifier = NearestNeighborClassifier(datas, labels)
 search(method, feature_size, instance_size, classifier)
+

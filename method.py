@@ -1,7 +1,6 @@
 import numpy as np
 
 
-# TODO: rewrite the Nearest Neighbor Algorithm
 class NearestNeighborClassifier:
     def __init__(self, datas, labels):
         self.datas = datas
@@ -36,7 +35,8 @@ def search(method, feature_size, instance_size, classifier):
     print("This dataset has {} features(not including the class attribute), with {} instances."
           .format(feature_size, instance_size))
     print("Running nearest neighbor with all {} features, "
-          "using \"leaving-one-out\" evaluation, I get an accuracy of {}%".format(feature_size, classifier.accuracy()))
+          "using \"leaving-one-out\" evaluation, I get an accuracy of {}%"
+          .format(feature_size, classifier.accuracy()))
     print("Beginning search.")
     if method == "1":
         forward_selection(classifier, feature_size)
