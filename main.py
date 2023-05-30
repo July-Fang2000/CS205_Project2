@@ -14,7 +14,7 @@ _, file_extension = os.path.splitext(filename)
 # Get the algorithm choice from the user
 method = input("Type the number of the algorithm you want to run.\n"
                "     1) Forward Selection\n"
-               "     2) Backward Selection\n")
+               "     2) Backward Elimination\n")
 
 # Initialize empty lists for data and labels
 datas = []
