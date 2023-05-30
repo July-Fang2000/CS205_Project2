@@ -122,7 +122,7 @@ Welcome to Zelai Fang and Hengshuo Zhang Feature Selection Algorithm.
 Type in the name of the file to test: CS170_small_Data__32.txt
 Type the number of the algorithm you want to run.
      1) Forward Selection
-     2) Backward Selection
+     2) Backward Elimination
 1
 This dataset has 10 features(not including the class attribute), with 1000 instances.
 Running nearest neighbor with all 10 features, using "leaving-one-out" evaluation, I get an accuracy of 77.6%
@@ -538,7 +538,7 @@ _, file_extension = os.path.splitext(filename)
 # Get the algorithm choice from the user
 method = input("Type the number of the algorithm you want to run.\n"
                "     1) Forward Selection\n"
-               "     2) Backward Selection\n")
+               "     2) Backward Elimination\n")
 
 # Initialize empty lists for data and labels
 datas = []
