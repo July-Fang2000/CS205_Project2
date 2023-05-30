@@ -3,12 +3,13 @@
 ## Group Members:
 
 - **Zelai Fang**
-	- NetID: zfang052
-	- StudentID: 862395114
+
+  - NetID: zfang052
+  - StudentID: 862395114
 
 - **Hengshuo Zhang**
-	- NetID: hzhan402
-	- StudentID: 862395234
+  - NetID: hzhan402
+  - StudentID: 862395234
 
 ## Introduction
 
@@ -21,7 +22,6 @@
 ### Nearest Neighbor Algorithm
 
 - In this project, we employ the 1-NN (1-Nearest Neighbor) algorithm, where an instance is classified by a majority vote of its nearest neighbor. The algorithm calculates the Euclidean distance between a new instance and all training samples, determining the closest instance. The new instance is then assigned the label of the nearest training sample. The NN algorithm is particularly suitable for feature selection as it distinctly indicates the influence of each feature on prediction accuracy.
-
 
 ### Feature Selection
 
@@ -40,28 +40,29 @@
 ## Code Implementation
 
 - **main.py**
-	- Initiates the program by reading the data file and selected feature selection method, then accordingly invokes preprocessing and feature selection functionalities.
+
+  - Initiates the program by reading the data file and selected feature selection method, then accordingly invokes preprocessing and feature selection functionalities.
 
 - **method.py**
-	- Defines the `NearestNeighborClassifier`, providing methods for calculating distance, finding nearest neighbors, predicting labels, and calculating accuracy. The `search` function implements the feature selection methods, used for computing every feature subset.
-	- Defines `accuracy_with_features`, a method for calculating accuracy when using feature subsets, which assists in feature selection.
+
+  - Defines the `NearestNeighborClassifier`, providing methods for calculating distance, finding nearest neighbors, predicting labels, and calculating accuracy. The `search` function implements the feature selection methods, used for computing every feature subset.
+  - Defines `accuracy_with_features`, a method for calculating accuracy when using feature subsets, which assists in feature selection.
 
 - **preprocess.py**
-	- Used for data preprocessing tasks, including reading data from different file types and standardizing feature values.
+  - Used for data preprocessing tasks, including reading data from different file types and standardizing feature values.
 
 ## Results
 
-| Dataset | Forward Selection (Best Subset) | Accuracy | Backward Elimination (Best Subset) | Accuracy |
-| ------------- | :---: |  :---: | :---: | :---: |
-| CS170_small_Data__27.txt | { 10,1,4 } | 96.1 % | { 1,10 } | 95.9 % |
-| CS170_small_Data__32.txt | { 3,5 } | 96.4 % | { 3,5 } | 96.4 % |
-| CS170_small_Data__33.txt | { 8,3 } | 97.6 % | { 3,8 } | 97.6 % |
-| CS170_large_Data__30.txt | { 11,18 } | 96.7 % | { 11,18 } | 96.7 % |
-| CS170_large_Data__32.txt | { 3,6 } | 96.8 % | { 3,6 } | 96.8 % |
-| CS170_large_Data__33.txt | { 4,10 } | 97.7 % | { 4,10 } | 97.7 % |
-| CS170_XXXlarge_Data__17.txt | { 16,17 } | 97.1% | { 3,4,5,6,10,12,13,14,15,18,20,21,22,23,24,<br>26,27,28,29,33,34,35,36,37,38,40,45,47,51,52,53,<br>55,58,61,63,64,66,69,70,71,72,73,78,79,80 } | 74.5 % |
-| data.csv | { 28,14,22,<br>24,18,20,7,23,<br>21,25,8,16 } | 98.1 % | { 1,2,3,4,5,7,8,11,12,13,14,16,<br>17,18,19,20,21,24,25,26,27,28,30 } | 97.5 % |
-
+| Dataset                       |        Forward Selection (Best Subset)        | Accuracy |                                                       Backward Elimination (Best Subset)                                                       | Accuracy |
+| ----------------------------- | :-------------------------------------------: | :------: | :--------------------------------------------------------------------------------------------------------------------------------------------: | :------: |
+| CS170_small_Data\_\_27.txt    |                  { 10,1,4 }                   |  96.1 %  |                                                                    { 1,10 }                                                                    |  95.9 %  |
+| CS170_small_Data\_\_32.txt    |                    { 3,5 }                    |  96.4 %  |                                                                    { 3,5 }                                                                     |  96.4 %  |
+| CS170_small_Data\_\_33.txt    |                    { 8,3 }                    |  97.6 %  |                                                                    { 3,8 }                                                                     |  97.6 %  |
+| CS170_large_Data\_\_30.txt    |                   { 11,18 }                   |  96.7 %  |                                                                   { 11,18 }                                                                    |  96.7 %  |
+| CS170_large_Data\_\_32.txt    |                    { 3,6 }                    |  96.8 %  |                                                                    { 3,6 }                                                                     |  96.8 %  |
+| CS170_large_Data\_\_33.txt    |                   { 4,10 }                    |  97.7 %  |                                                                    { 4,10 }                                                                    |  97.7 %  |
+| CS170_XXXlarge_Data\_\_17.txt |                   { 16,17 }                   |  97.1%   | { 3,4,5,6,10,12,13,14,15,18,20,21,22,23,24,<br>26,27,28,29,33,34,35,36,37,38,40,45,47,51,52,53,<br>55,58,61,63,64,66,69,70,71,72,73,78,79,80 } |  74.5 %  |
+| data.csv                      | { 28,14,22,<br>24,18,20,7,23,<br>21,25,8,16 } |  98.1 %  |                                     { 1,2,3,4,5,7,8,11,12,13,14,16,<br>17,18,19,20,21,24,25,26,27,28,30 }                                      |  97.5 %  |
 
 ## Processing a Real-World Classification Dataset
 
@@ -76,26 +77,24 @@
 1. id: continuous
 2. diagnosis: String (M = malignant, B = benign)
 3. Ten real-valued features:
-	- radius: continuous
-	- texture: continuous
-	- perimeter: continuous
-	- area: continuous
-	- smoothness: continuous 
-	- compactness: continuous 
-	- concavity: continuous 
-	- concave points: continuous
-	- symmetry: continuous
-	- fractal dimension: continuous
+   - radius: continuous
+   - texture: continuous
+   - perimeter: continuous
+   - area: continuous
+   - smoothness: continuous
+   - compactness: continuous
+   - concavity: continuous
+   - concave points: continuous
+   - symmetry: continuous
+   - fractal dimension: continuous
 
 - Prior to the commencement of search operations, we first perform z-normalization on the data, normalizing continuous values to ensure that features with larger numerical ranges do not disproportionately influence the nearest neighbor algorithm. Additionally, we re-encode the `diagnosis` label of M and B using integer values for easier classification, with malignant = 1 and benign = 2.
 
 - After employing feature selection algorithms of forward selection and backward elimination, we find that when using forward selection for feature selection, the final result retains 12 feature attributes with an accuracy of 98.1%. When using backward elimination for feature selection, the final result retains 23 feature attributes with an accuracy of 97.5%. The accuracy of both methods is very similar. For forward selection, choosing fewer features indicates that certain attributes have a stronger impact on the diagnosis of cancer, effectively summarizing necessary information from the dataset. Meanwhile, for backward elimination, the retention of more features suggests that the removal of any additional attributes could potentially degrade the performance of the classifier.
 
-
 ## Conclusion
 
 - The project demonstrates the potential of nearest neighbor classifiers, especially when paired with forward selection and backward elimination feature selection methods. The high accuracy of both synthetic and real datasets demonstrates the practical relevance and wide applicability of the project. Furthermore, it deepens our understanding of feature selection techniques, which are crucial in the field of machine learning tasks for high-dimensional data.
-
 
 ## Reference
 
@@ -107,12 +106,11 @@
 
 **[4]** _UCI Machine Learning Repository. (n.d.). Breast Cancer Wisconsin (Diagnostic) Data Set. Retrieved from https://www.kaggle.com/uciml/breast-cancer-wisconsin-data_
 
-
 ## Trace of Sample Output
 
 ### Forward Selection
 
-#### File: CS170_small_Data__32.txt
+#### File: CS170_small_Data\_\_32.txt
 
 <details><summary>CLICK ME TO SEE OUTPUT</summary>
 <p>
@@ -219,10 +217,9 @@ Process finished with exit code 0
 </p>
 </details>
 
-
 ### Backward Elimination
 
-#### File: CS170_small_Data__33.txt
+#### File: CS170_small_Data\_\_33.txt
 
 <details><summary>CLICK ME TO SEE OUTPUT</summary>
 <p>
@@ -324,10 +321,9 @@ Process finished with exit code 0
 </p>
 </details>
 
-
 ## Code
 
-**method.py** 
+**method.py**
 [Link to Github Pages](https://github.com/Count3x/CS205_Project2/blob/main/method.py)
 
 <details><summary>CLICK ME TO SEE CODE</summary>
@@ -466,7 +462,6 @@ def feature_selection(classifier, size, method):
 
 </p>
 </details>
-
 
 **preprocess.py**
 [Link to Github Pages](https://github.com/Count3x/CS205_Project2/blob/main/preprocess.py)
